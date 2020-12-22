@@ -6,7 +6,7 @@ import (
 
 func ViperConfig() (*viper.Viper, error) {
 	v := viper.New()
-	v.SetConfigName("kifpooli")
+	v.SetConfigName("config")
 	v.AddConfigPath("./config")
 	err := v.ReadInConfig()
 	if err != nil {

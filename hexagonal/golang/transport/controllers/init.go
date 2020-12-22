@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"bizpooly/transport"
+	"template/transport"
 )
 
 type ControllerContext struct {

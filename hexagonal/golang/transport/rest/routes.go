@@ -1,7 +1,7 @@
 package rest
 
 import (
-	"bizpooly/transport/controllers"
+	"template/transport/controllers"
 	"github.com/labstack/echo"
 )
 

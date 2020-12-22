@@ -1,7 +1,7 @@
 package database
 
 import (
-	"bizpooly/transport"
+	"template/transport"
 )
 
 type DBContext struct {

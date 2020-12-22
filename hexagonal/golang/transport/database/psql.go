@@ -1,7 +1,7 @@
 package database
 
 import (
-	"bizpooly/config"
+	"template/config"
 	"database/sql"
 	"fmt"
 	_ "github.com/lib/pq"

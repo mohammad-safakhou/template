@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"bizpooly/models/rest"
+	"template/models/rest"
 	"github.com/labstack/echo"
 	"go.uber.org/zap"
 	"net/http"
@@ -25,7 +25,7 @@ func (z LoggerUtils) CustomZapHttpErrorHandler(err error, c echo.Context) {
 		code = s.Code
 		message = s.Message
 	} else {
-		z.Warn("try using frame works http error")
+		z.Warn("try using http error frameworks")
 		c.JSON(http.StatusBadGateway, err.Error())
 		return
 	}

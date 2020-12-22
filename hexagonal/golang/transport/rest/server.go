@@ -1,19 +1,16 @@
 package rest
 
 import (
-	"bizpooly/config"
-	"bizpooly/transport"
-	"bizpooly/transport/database"
 	"fmt"
 	"github.com/labstack/echo"
 	"go.uber.org/zap"
+	"template/config"
+	"template/transport"
+	"template/transport/database"
 )
 
-type RContext struct {
-	transport.ApplicationContext
-}
 
-func StartServer(l *zap.SugaredLogger) {
+func StartRestServer(l *zap.SugaredLogger) {
 	ac := transport.ApplicationContext{
 		VConfig: nil,
 		PsqlDb:  nil,

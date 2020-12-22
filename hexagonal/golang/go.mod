@@ -1,4 +1,4 @@
-module bizpooly
+module template
 
 go 1.15
 

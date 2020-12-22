@@ -1,11 +1,11 @@
 package main
 
 import (
-	"bizpooly/logger"
-	"bizpooly/transport/rest"
+	"template/logger"
+	"template/transport/rest"
 )
 func main() {
 	l := logger.ZapLogger()
 	s := l.Sugar()
-	rest.StartServer(s)
+	rest.StartRestServer(s)
 }

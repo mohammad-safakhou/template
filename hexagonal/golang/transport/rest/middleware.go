@@ -1,7 +1,7 @@
 package rest
 
 import (
-	"bizpooly/logger"
+	"template/logger"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 )
