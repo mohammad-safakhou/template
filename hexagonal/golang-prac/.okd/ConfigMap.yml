@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Template
+objects:
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    labels:
+      app.snappcloud.io/name: ${SERVICE_NAME}
+      app: ${SERVICE_NAME}
+    name: "${SERVICE_NAME}"
+  data:
+parameters:
+  - name: SERVICE_NAME
+    displayName: Service Name
+    description: The name used when creating the required deployment config, build config, service etc.
+      Must be unique in your project, and contain only lower-case letters and numbers.
+    value: "test"
+    required: true

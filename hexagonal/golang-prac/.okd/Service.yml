@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Template
+objects:
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: ${SERVICE_NAME}
+      labels:
+        app.snappcloud.io/name: ${SERVICE_NAME}
+        app: ${SERVICE_NAME}
+    spec:
+      selector:
+        deploymentconfig: ${SERVICE_NAME}
+      ports:
+      - name: ${SERVICE_NAME}-tcp
+        port: 9000
+        protocol: TCP
+        targetPort: 9000
+parameters:
+  - name: SERVICE_NAME
+    displayName: Service Name
+    required: true
+    value: "test"
