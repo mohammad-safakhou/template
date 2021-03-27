@@ -1,0 +1,7 @@
+[psql]
+  dbname = "backend"
+  host   = "localhost"
+  port   = 5432
+  user   = "gamino"
+  pass   = "password"
+  sslmode = "disable"
