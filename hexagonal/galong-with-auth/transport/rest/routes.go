@@ -12,6 +12,6 @@ func (ac *RContext) RegisterRoutes(e *echo.Echo) {
 	v1 := e.Group("/v1")
 
 	v1.GET("/hello", controllerContext.Hello)
-	v1.POST("/auth/otp", controllerContext.OTP(), authContext.WithAuth("POST", "/v1/auth/otp"))
-	v1.POST("/auth/verify", controllerContext.VerifyOTP(), authContext.WithAuth("POST", "/v1/auth/verify"))
+	v1.POST("/auth/otp", controllerContext.OTP(), authContext.WithAuth())
+	v1.POST("/auth/verify", controllerContext.VerifyOTP(), authContext.WithAuth())
 }

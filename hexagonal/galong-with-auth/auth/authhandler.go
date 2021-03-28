@@ -5,7 +5,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func (ac *AuthContext) WithAuth(method string, path string) echo.MiddlewareFunc {
+func (ac *AuthContext) WithAuth() echo.MiddlewareFunc {
 	return func(h echo.HandlerFunc) echo.HandlerFunc {
 		return func(ctx echo.Context) error {
 			t := ctx.Request().Header.Get("Authorization")
@@ -33,7 +33,7 @@ func (ac *AuthContext) WithAuth(method string, path string) echo.MiddlewareFunc 
 			}
 
 			for _, per := range ident.Permissions {
-				if per.Route.String == path && per.Method.String == method {
+				if per.Route.String == ctx.Request().RequestURI && per.Method.String == ctx.Request().Method {
 					cancan = true
 					break
 				}
