@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"template/adapters/api"
+	"template/domain/backend/adapters/api"
 )
 
 func init() {

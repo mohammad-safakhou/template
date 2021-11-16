@@ -2,7 +2,7 @@ package usecase
 
 import (
 	"fmt"
-	"template/core/ports"
+	"template/domain/backend/core/ports"
 )
 
 type helloHandler struct {

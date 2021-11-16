@@ -3,8 +3,8 @@ package api
 import (
 	"github.com/labstack/echo/v4"
 	"net/http"
-	"template/adapters/repository"
-	"template/core/usecase"
+	"template/domain/backend/adapters/repository"
+	"template/domain/backend/core/usecase"
 )
 
 

@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"github.com/volatiletech/null/v8"
 	"github.com/volatiletech/sqlboiler/v4/boil"
-	"template/adapters/repository/models"
-	"template/core/ports"
+	"template/domain/backend/adapters/repository/models"
+	"template/domain/backend/core/ports"
 )
 
 type helloRepository struct {
