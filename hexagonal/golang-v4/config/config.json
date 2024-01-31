@@ -1,0 +1,22 @@
+{
+  "general": {
+    "listen": "12081",
+    "log_level": 0,
+    "shutdown_timeout": "5s"
+  },
+  "databases": {
+    "postgres": {
+      "host": "localhost",
+      "port": "5432",
+      "user": "root",
+      "pass": "password",
+      "database_name": "darooghe",
+      "ssl_mode": "disable",
+      "max_open_conns": 10,
+      "max_idle_conns": 20,
+      "timeout": "30s"
+    }
+  },
+  "agents": {
+  }
+}
